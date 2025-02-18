@@ -9,7 +9,6 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +16,225 @@
       rel="stylesheet"
     />
     <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+      }
+
+      /* Footer Styling */
+      .footer {
+        margin-top: 20px;
+        position: relative;
+        width: 100%;
+        background: #000;
+        color: #fff;
+        padding: 3rem 0;
+        margin-top: 70px;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1600px;
+        margin: auto;
+        padding: 0 20px;
+      }
+
+      /* Footer Columns */
+      .footer__columns {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      /* Footer Column */
+      .footer__col {
+        flex: 1;
+        min-width: 250px;
+      }
+
+      /* Column Titles */
+      .footer__col-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+      }
+
+      /* Footer Links */
+      .footer__nav-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer__nav-list li {
+        margin-bottom: 1rem;
+      }
+
+      .footer__nav-list a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer__nav-list a:hover {
+        color: #f36304;
+      }
+
+      /* Copyright Section */
+      .footer__copyrights {
+        text-align: center;
+        padding-top: 2rem;
+        margin-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* Parallax Effect */
+      .footer__parallax {
+        position: absolute;
+        left: 0;
+        top: -300px;
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      /* Parallax Elements */
+      .footer__parallax-trees,
+      .footer__parallax-premierplan,
+      .footer__parallax-secondplan {
+        position: absolute;
+        inset: 0;
+        background-repeat: repeat-x;
+        background-position-y: 100%;
+        animation: parallax 600s linear infinite;
+      }
+
+      /* Specific Backgrounds */
+      .footer__parallax-trees {
+        background-image: url(https://i.ibb.co/nQM4PGJ/arbres.png);
+        bottom: -60px;
+        animation-duration: 1000s;
+      }
+
+      .footer__parallax-premierplan {
+        background-image: url(https://i.ibb.co/RQhDWbk/premierplanv3.png);
+        animation-duration: 500s;
+      }
+
+      .footer__parallax-secondplan {
+        background-image: url(https://i.ibb.co/J3TjC4W/second-plan.png);
+        animation-duration: 600s;
+      }
+
+      /* Animated Moto */
+      .footer__parallax-moto {
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        margin-left: -250px;
+        height: 200px;
+        width: 150px;
+        background: url(https://i.ibb.co/JCGfFJd/moto-net.gif);
+        background-repeat: no-repeat;
+        transform-origin: 50% 80%;
+        animation: moto 5s linear infinite;
+      }
+
+      /* Animated Car */
+      .footer__parallax-voiture {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin-left: 250px;
+        height: 114px;
+        width: 206px;
+        background: url(https://i.ibb.co/0Qhp4DN/voiture-fumee.gif);
+        background-repeat: no-repeat;
+        animation: voiture 1s linear infinite;
+      }
+
+      /* Keyframe Animations */
+      @keyframes parallax {
+        0% {
+          background-position: 260px;
+        }
+        100% {
+          background-position: -10000vw;
+        }
+      }
+
+      @keyframes moto {
+        0% {
+          transform: translateY(0) rotate(0);
+        }
+        5% {
+          transform: translateY(0) rotate(-5deg);
+        }
+        25% {
+          transform: translateY(60px) rotate(-20deg);
+        }
+        49% {
+          transform: translateY(0) rotate(-1deg);
+        }
+        51% {
+          transform: translateY(0) rotate(1deg);
+        }
+        75% {
+          transform: translateY(60px) rotate(20deg);
+        }
+        80% {
+          transform: translateY(60px) rotate(0deg);
+        }
+        98% {
+          transform: translateY(0) rotate(0);
+        }
+      }
+
+      @keyframes voiture {
+        0% {
+          transform: rotate(0);
+        }
+        25% {
+          transform: rotate(-5deg);
+        }
+        50% {
+          transform: rotate(0);
+        }
+        75% {
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: rotate(0);
+        }
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 992px) {
+        .footer__columns {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer__col {
+          margin-bottom: 20px;
+        }
+
+        .footer__parallax-moto,
+        .footer__parallax-voiture {
+          display: none;
+        }
+      }
+
       .gallery-section {
         padding: 4rem 0;
         background: #f8f9fa;
@@ -80,37 +298,37 @@
       }
 
       .hero-section {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-        url("/images/seroma3.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+          url("/images/seroma3.jpg") center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-    .overlay {
-      text-align: center;
-      color: white;
-    }
+      .overlay {
+        text-align: center;
+        color: white;
+      }
 
-     .custom-btn {
-      background-color: #ff5733; /* Custom Orange */
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      font-size: 18px;
-      transition: 0.3s;
-    }
+      .custom-btn {
+        background-color: #ff5733; /* Custom Orange */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 18px;
+        transition: 0.3s;
+      }
 
-    .custom-btn:hover {
-      background-color: #cc4628; /* Darker shade on hover */
-    }
+      .custom-btn:hover {
+        background-color: #cc4628; /* Darker shade on hover */
+      }
     </style>
   </head>
   <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="images/logo.svg" alt="School Logo" width="120" />
