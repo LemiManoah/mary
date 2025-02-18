@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Environmental Gallery - Seroma Christian High School</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .gallery-section {
+        padding: 4rem 0;
+        background: #f8f9fa;
+      }
+
+      .gallery-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+        margin-bottom: 1.5rem;
+      }
+
+      .gallery-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .gallery-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .gallery-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 1rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-card:hover .gallery-caption {
+        transform: translateY(0);
+      }
+
+      .section-title {
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: #0d6efd;
+      }
+
+      .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+        url("/images/seroma3.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay {
+      text-align: center;
+      color: white;
+    }
+
+     .custom-btn {
+      background-color: #ff5733; /* Custom Orange */
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .custom-btn:hover {
+      background-color: #cc4628; /* Darker shade on hover */
+    }
+    </style>
+  </head>
+  <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.svg" alt="School Logo" width="120" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="translated.html">ARABIC VERSION</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Your Header Section Here -->
+    <section
+      class="header d-flex align-items-center justify-content-center text-white text-center"
+      style="
+        min-height: 100vh;
+        background: url('/images/seroma3.jpg') center/cover no-repeat;
+      "
+    >
+      <div class="hero-section">
+        <div class="overlay">
+          <div class="container text-center text-white">
+            <h1>GUNE MARY JOHN</h1>
+            <p>"MY ENVIRONMENT"</p>
+            <a href="gallery.html" class="btn custom-btn"
+              >View Project Gallery</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="text-center section-title">
+          Environmental Awareness Gallery
+        </h2>
+        <p class="lead text-center mb-5">
+          Documenting our journey towards a sustainable future
+        </p>
+
+        <div class="row g-4" data-masonry='{"percentPosition": true}'>
+          <!-- Gallery Items -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img src="/images/image1.png" alt="About" class="rounded-top" />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">About Our Mission</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image2.png"
+                alt="Background"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Campus Initiative</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img src="/images/image3.png" alt="Banner" class="rounded-top" />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Awareness Campaign</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image4.png"
+                alt="Banner 2"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Sustainability Projects</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image5.png"
+                alt="Basketball"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Eco-Friendly Facilities</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img src="/images/image6.png" alt="Library" class="rounded-top" />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img src="/images/image7.png" alt="Library" class="rounded-top" />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img src="/images/image8.png" alt="Library" class="rounded-top" />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-16 col-md-12 col-lg-8 col-xl-6">
+            <div class="gallery-card shadow-sm">
+              <img src="/images/image9.png" alt="Library" class="rounded-top" />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-16 col-md-12 col-lg-8 col-xl-6">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image12.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image10.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image11.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-16 col-md-12 col-lg-8 col-xl-6">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image14.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image15.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image16.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image17.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image18.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image19.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image20.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image21.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gallery-card shadow-sm">
+              <img
+                src="/images/image22.png"
+                alt="Library"
+                class="rounded-top"
+              />
+              <div class="gallery-caption rounded-bottom">
+                <h5 class="mb-0">Green Learning Spaces</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__parallax">
+        <div class="footer__parallax-trees"></div>
+        <div class="footer__parallax-premierplan"></div>
+        <div class="footer__parallax-secondplan"></div>
+        <div class="footer__parallax-moto"></div>
+        <div class="footer__parallax-voiture"></div>
+      </div>
+
+      <div class="container">
+        <div class="footer__columns">
+          <!-- Column 1 -->
+          <div class="footer__col">
+            <h3 class="footer__col-title">End of Newsletter</h3>
+            <p>
+              This newsletter serves as an informative resource to increase
+              awareness and spur action against the climate crisis. By
+              understanding the science, recognizing the consequences, and
+              learning about solutions, we can work together to combat global
+              warming and create a sustainable future.
+            </p>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="footer__col">
+            <h3 class="footer__col-title">Quick Links</h3>
+            <ul class="footer__nav-list">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="gallery.html">GALLERY</a></li>
+              <li><a href="translated.html">ARABIC VERSION</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="footer__col">
+            <h3 class="footer__col-title">Contact</h3>
+            <p>Gune Mary John</p>
+            <p>Senior Four</p>
+            <p>Email: seroma.ac@gmail.com</p>
+            <p>Address: Mukono, Uganda</p>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer__copyrights">
+          <p>© 2025 Seroma Christian High School. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and Masonry -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+  </body>
+</html>
